@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        .dropbtn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f1f1f1;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown:hover .dropbtn {
+            background-color: #3e8e41;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Выбрать роль</h2>
+<p>Наведите курсором мишы на кнопку Выбрать роль ... и выберите роль </p>
+
+<div class="dropdown">
+    <button class="dropbtn">Выбрать роль ...</button>
+    <div class="dropdown-content">
+        <a href="#">░=Premium=░ - 15 руб</a>
+        <a href="#">◄-Moderator-► - 24 руб</a>
+        <a href="#">█⋖ Gl.Moderator ⋗█ - 30 руб</a>
+        <a href="#">▒ ▓ OWNER ▓ ▒ - 45 руб</a>
+        <a href="#">╔╗ ╚╝Administrator╚╝ ╔╗ - 50 руб</a>
+        <a href="#">▄▀▄▓Зам.SnakeHey▓▄▀▄ - 65 руб</a>
+        <a class="noSale" href="#">✭░ ▒█▄▀(✔)Управляющий (✔)█ ▀ ▄░ ▒✭ - |Не продается|</a>
+    </div>
+</div>
+<script>
+    let allA = document.querySelectorAll('.dropdown-content a')
+    let textTarget = document.querySelector('.dropbtn')
+    for (let oneA of allA) {
+        if (!oneA.classList.contains('noSale')) {
+            oneA.addEventListener('click', () => {
+                textTarget.innerText = oneA.innerText
+            })
+        }
+    }
+    //git checkout -b gh-pages
+    // git add .
+    // git commit -m "Initial"
+    // git push origin gh-pages
+</script>
+</body>
+</html>
