@@ -2,6 +2,7 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
     <style>
         .dropbtn {
             background-color: #4CAF50;
@@ -44,23 +45,62 @@
             background-color: #3e8e41;
         }
     </style>
+    <style>
+        body {
+            margin: 0;
+            background-color: silver;
+        }
+        .container {
+            margin: 0 auto;
+            max-width: 670px;
+            padding: 23px;
+            background-color: white;
+        }
+        .imgCenter {
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
-
-<h2>Выбрать роль</h2>
-<p>Наведите курсором мишы на кнопку Выбрать роль ... и выберите роль </p>
-
-<div class="dropdown">
-    <button class="dropbtn">Выбрать роль ...</button>
-    <div class="dropdown-content">
-        <a href="#">░=Premium=░ - 15 руб</a>
-        <a href="#">◄-Moderator-► - 24 руб</a>
-        <a href="#">█⋖ Gl.Moderator ⋗█ - 30 руб</a>
-        <a href="#">▒ ▓ OWNER ▓ ▒ - 45 руб</a>
-        <a href="#">╔╗ ╚╝Administrator╚╝ ╔╗ - 50 руб</a>
-        <a href="#">▄▀▄▓Зам.SnakeHey▓▄▀▄ - 65 руб</a>
-        <a class="noSale" href="#">✭░ ▒█▄▀(✔)Управляющий (✔)█ ▀ ▄░ ▒✭ - |Не продается|</a>
+<div class="container">
+    <div class="imgCenter">
+        <img src="PSX_20200227_195835.jpg">
     </div>
+
+    <p>Добро пожаловать на сайт покупки роли ( доната ) на сервере SNAKE HEY [DIE AND KILL]</p>
+    <p>Ознакомтесь с правилами при заполнения заявки на покупку доната !</p>
+    <p>1.Вам требуется выбрать роль которую вы хотите купить !</p>
+    <p>2.Потом вы отвечаете на все вопросы ниже ( например Напишите ваш никнейм в дискорде например test#0000 )</p>
+    <p>3.Вы отвечаете на ети вопросы <b>АДЕКВАТНО</b> !</p>
+    <p>4.Если вы ответите на вопрос словом нет ( кроме последнего вопроса ) то вы не получите роль !</p>
+
+    <h2>Выбрать роль</h2>
+    <p>Наведите курсором мишы на кнопку Выбрать роль ... и выберите роль </p>
+
+    <div class="dropdown">
+        <button class="dropbtn">Выбрать роль ...</button>
+        <div class="dropdown-content">
+            <a href="#">░=Premium=░ - 15 руб</a>
+            <a href="#">◄-Moderator-► - 24 руб</a>
+            <a href="#">█⋖ Gl.Moderator ⋗█ - 30 руб</a>
+            <a href="#">▒ ▓ OWNER ▓ ▒ - 45 руб</a>
+            <a href="#">╔╗ ╚╝Administrator╚╝ ╔╗ - 50 руб</a>
+            <a href="#">▄▀▄▓Зам.SnakeHey▓▄▀▄ - 65 руб</a>
+            <a class="noSale" href="#">✭░ ▒█▄▀(✔)Управляющий (✔)█ ▀ ▄░ ▒✭ - |Не продается|</a>
+        </div>
+    </div>
+
+    <p><em>Теперь надо заполнить заявку на покупку !</em></p>
+    <p><b>Напишите ваш никнейм в дискорде ( например test#0000 )</b></p>
+    <textarea></textarea>
+    <p><b>Напишите . Почему вы хотите купить роль на дискорд сервере ?</b></p>
+    <textarea></textarea>
+    <p><b>У вас сейчас есть или была роль на сервере ! Если да но напишите какая была у вас роль .</b></p>
+    <textarea></textarea>
+    <p><b>Прочитали ли вы правила сервера и будете вы их соблюдать ?</b></p>
+    <textarea></textarea>
+    <p><b>Вы принимаете согласия на то , что вы после покупки следить за сервером и наказывать нарушителей ?</b></p>
+    <textarea></textarea>
 </div>
 <script>
     let allA = document.querySelectorAll('.dropdown-content a')
@@ -74,10 +114,15 @@
     }
     /*
     git checkout -b gh-pages
+
     git add .
     git commit -m "Initial"
     git push origin gh-pages
     */
 </script>
+
 </body>
 </html>
+
+
+
