@@ -17,8 +17,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="164">
-              <caret line="123" lean-forward="true" selection-start-line="123" selection-end-line="123" />
+            <state relative-caret-position="28">
+              <caret line="119" column="28" lean-forward="true" selection-start-line="117" selection-start-column="4" selection-end-line="119" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -56,7 +56,7 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-8" />
     <option name="width" value="1346" />
     <option name="height" value="698" />
@@ -114,11 +114,12 @@
       <workItem from="1582748301800" duration="635000" />
       <workItem from="1582749176349" duration="606000" />
       <workItem from="1582823611490" duration="8055000" />
+      <workItem from="1582898150378" duration="397000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9296000" />
+    <option name="totallyTimeSpent" value="9693000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
@@ -151,6 +152,16 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2091">
+          <caret line="123" lean-forward="true" selection-start-line="123" selection-end-line="123" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PSX_20200227_195835.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1309">
           <caret line="77" column="13" lean-forward="true" selection-start-line="76" selection-end-line="78" selection-end-column="27" />
         </state>
@@ -168,8 +179,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="164">
-          <caret line="123" lean-forward="true" selection-start-line="123" selection-end-line="123" />
+        <state relative-caret-position="28">
+          <caret line="119" column="28" lean-forward="true" selection-start-line="117" selection-start-column="4" selection-end-line="119" selection-end-column="28" />
         </state>
       </provider>
     </entry>
