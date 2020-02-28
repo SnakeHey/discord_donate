@@ -50,6 +50,7 @@
             margin: 0;
             background-color: silver;
         }
+
         .container {
             margin: 0 auto;
             max-width: 670px;
@@ -57,6 +58,7 @@
             background-color: white;
             font: normal 1.0em/1.4 'Arial', sans-serif;
         }
+
         .imgCenter {
             text-align: center;
         }
@@ -85,13 +87,13 @@
     <div class="dropdown">
         <button class="dropbtn">Выбрать роль ...</button>
         <div class="dropdown-content">
-            <a href="#">░=Premium=░ - 15 руб</a>
-            <a href="#">◄-Moderator-► - 24 руб</a>
-            <a href="#">█⋖ Gl.Moderator ⋗█ - 30 руб</a>
-            <a href="#">▒ ▓ OWNER ▓ ▒ - 45 руб</a>
-            <a href="#">╚╝Administrator╚╝ - 50 руб</a>
-            <a href="#">▄▀▄▓Зам.SnakeHey▓▄▀▄ - 65 руб</a>
-            <a class="noSale" href="#"> ░(✔)Управляющий(✔)░  - |Не продается|</a>
+            <a>░=Premium=░ - 15 руб</a>
+            <a>◄-Moderator-► - 24 руб</a>
+            <a>█⋖ Gl.Moderator ⋗█ - 30 руб</a>
+            <a>▒ ▓ OWNER ▓ ▒ - 45 руб</a>
+            <a>╚╝Administrator╚╝ - 50 руб</a>
+            <a>▄▀▄▓Зам.SnakeHey▓▄▀▄ - 65 руб</a>
+            <a class="noSale"> ░(✔)Управляющий(✔)░ - |Не продается|</a>
         </div>
     </div>
 
@@ -104,42 +106,135 @@
     <textarea></textarea>
     <p><b>Прочитали ли вы правила сервера и будете вы их соблюдать ?</b></p>
     <textarea></textarea>
-    <p><b>Вы принимаете согласия на то , что вы после покупки будете следить за сервером и наказывать нарушителей ?</b></p>
+    <p><b>Вы принимаете согласия на то , что вы после покупки будете следить за сервером и наказывать нарушителей ?</b>
+    </p>
     <textarea></textarea>
     <!DOCTYPE html>
     <h1 style="color:red;">Отправка заявки...</h1>
     <p>Теперь вам требуется отправить эту заявку !</p>
     <p>Что-бы отправить её , надо нажать на кнопку <b>Отправить</b></p>
-    <a href="#" class="green">Отправить</a>
-    <style>a.green{
-    border-radius: 4px;
-    -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.08);
-    -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.08);
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.08);
-    color: #fff;
-    display:block;
-    width:100px;
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 14px;
-    padding: 8px 16px;
-    margin: 20px auto;
-    text-decoration: none;
-    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.075);
-    -webkit-transition: background-color 0.1s linear;
-    -moz-transition: background-color 0.1s linear;
-    -o-transition: background-color 0.1s linear;
-    transition: background-color 0.1s linear;
-}
-a.green {
-    background-color: rgb( 43, 153, 91 );
-    border: 1px solid rgb( 33, 126, 74 );
-}
+    <a href="#" id="my-form-button" class="green">Отправить</a>
+    <style>a.green {
+        border-radius: 4px;
+        -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.08);
+        -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.08);
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.08);
+        color: #fff;
+        display: block;
+        width: 100px;
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        padding: 8px 16px;
+        margin: 20px auto;
+        text-decoration: none;
+        text-shadow: 0 1px 1px rgba(0, 0, 0, 0.075);
+        -webkit-transition: background-color 0.1s linear;
+        -moz-transition: background-color 0.1s linear;
+        -o-transition: background-color 0.1s linear;
+        transition: background-color 0.1s linear;
+    }
 
-a.green:hover {
-    background-color: rgb( 75, 183, 141 );
-}</style>
+    a.green {
+        background-color: rgb(43, 153, 91);
+        border: 1px solid rgb(33, 126, 74);
+    }
 
+    a.green:hover {
+        background-color: rgb(75, 183, 141);
+    }
+    </style>
+    <!-- modify this form HTML and place wherever you want your form -->
+
+    <form id="my-form" action="https://formspree.io/mqkbbgra" method="POST">
+        <input type="hidden" name="email"/>
+        <input type="hidden" name="message" id="mes"/>
+        <p id="my-form-status"></p>
+    </form>
+
+    <!-- Place this script at the end of the body tag -->
+
+    <script>
+        window.addEventListener("DOMContentLoaded", function () {
+
+            // get the form elements defined in your form HTML above
+
+            var form = document.getElementById("my-form");
+            var button = document.getElementById("my-form-button");
+            var status = document.getElementById("my-form-status");
+
+            // Success and Error functions for after the form is submitted
+
+            function success() {
+                form.reset();
+                button.style = "display: none ";
+                status.innerHTML = "Заполнена вами заявка отправлена!";
+            }
+
+            function error() {
+                status.innerHTML = "Oops! There was a problem.";
+            }
+
+            // handle the form submission event
+
+
+            (function () {
+                if ( typeof window.CustomEvent === "function" ) return false;
+
+                function CustomEvent ( event, params ) {
+                    params = params || { bubbles: true, cancelable: true, detail: undefined };
+                    var evt = document.createEvent('submit');
+                    evt.initCustomEvent( event, params.bubbles, params.cancelable, params.detail );
+                    return evt;
+                }
+
+                CustomEvent.prototype = window.Event.prototype;
+
+                window.CustomEvent = CustomEvent;
+
+            })();
+            var evt = new CustomEvent("submit", {"bubbles":true, "cancelable": true});
+
+            form.addEventListener("submit", function (ev) {
+                ev.preventDefault();
+                var data = new FormData(form);
+                debugger
+                ajax(form.method, form.action, data, success, error);
+            });
+
+            button.addEventListener("click", function (ev) {
+                let x  = document.querySelectorAll('textarea')
+                let res = []
+                for(let v of x) {
+                    res.push(v.value)
+                }
+                let textTarget = document.querySelector('.dropbtn')
+                res.push(textTarget.innerText)
+                let mesEl = document.querySelector('#mes')
+                mesEl.value = res.join("\r\n\r\n")
+                form.dispatchEvent(evt);
+                //form.submit();
+            })
+
+        });
+
+        // helper function for sending an AJAX request
+
+        function ajax(method, url, data, success, error) {
+            var xhr = new XMLHttpRequest();
+            xhr.open(method, url);
+            xhr.setRequestHeader("Accept", "application/json");
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState !== XMLHttpRequest.DONE) return;
+                if (xhr.status === 200) {
+                    success(xhr.response, xhr.responseType);
+                } else {
+                    error(xhr.status, xhr.response, xhr.responseType);
+                }
+            };
+            xhr.send(data);
+        }
+    </script>
 </div>
 <script>
     let allA = document.querySelectorAll('.dropdown-content a')
@@ -159,7 +254,7 @@ a.green:hover {
     git push origin gh-pages
     */
 </script>
-<title>SnakeDiscordDonate</title>
+
 
 </body>
 </html>
